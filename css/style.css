@@ -1,3 +1,15 @@
+* {
+	margin: 0;
+	padding: 0;	
+	list-style-type: none;
+}
+
+a:hover,
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .line {
 	width: 100%;
 }
@@ -23,12 +35,14 @@
 	font-size: 12px;
 }
 
+.line.contacts-top .data .social {
+	display: flex;
+}
+
 .line.contacts-top .data .social .pic {
-	display: inline-block;
 	width: 30px;
 	height: 30px;
 	color: #808080;
-	text-decoration: none;
 	text-align: center;
 	line-height: 30px;
 	background: #e5e5e5;
@@ -62,7 +76,6 @@
 }
 
 .line.header .data menu li {
-	list-style-type: none;
 	text-transform: uppercase;
 	font-size: 12px;
 	color: #808080;
@@ -78,6 +91,30 @@
 
 .line.path .data {
 	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.line.path .data ul {
+	display: flex;
+}
+
+.line.path .data li:not(:last-child) {
+	color: #fff;
+}
+
+.line.path .data li span {
+	margin: 0 10px 0 10px;
+	font-weight: bold;
+	color: #1c818a;
+}
+
+.line.path .data li:last-child {
+	color: #9dedf4;
+}
+
+.line.path .data li:last-child span {
+	display: none;
 }
 
 .line.namepage {
@@ -86,6 +123,21 @@
 
 .line.namepage .data {
 	height: 150px;
+	display: flex;
+	align-items: center;
+}
+
+.line.namepage .data h1{
+	color: #fff;
+	font-size: 32px;
+	line-height: 0px;
+	padding-bottom: 10px;
+}
+
+.line.namepage .data p{
+	color: #9dedf4;
+	font-size: 20px;
+	line-height: 0px;
 }
 
 .line.content {
@@ -93,7 +145,70 @@
 }
 
 .line.content .data {
-	height: 300px;
+	padding-top: 45px;
+}
+
+.line.content .data .nav {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	background-color: #f2f2f2; 
+	margin-bottom: 45px;
+}
+
+.line.content .data .nav ul {
+	display: flex;
+	font-size: 12px;
+	color: #fff;
+}
+
+.line.content .data .nav ul li {
+	margin-left: 5px;
+	line-height: 32px;
+	color: #808080;
+	text-transform: uppercase;
+	padding: 0 15px;
+}
+
+.line.content .data .nav ul li:first-child {
+	background: #29bdca;
+	color: #fff;
+}
+
+.line.content .data .images {
+	width: 100%;
+	overflow: hidden;
+}
+
+.line.content .data .images ul {
+	margin-right: -30px; 
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.line.content .data .images li {
+	width: 300px;
+	margin-right: 30px; 
+	margin-bottom: 30px;
+}
+
+.line.content .data .images li img {
+	width: 100%;
+	height: 150px;
+	background-color: #99c; 
+	margin-bottom: 12px;
+}
+
+.line.content .data .images .namepic {
+	color: #29bdca;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.line.content .data .images .date {
+	color: #808080;
+	font-size: 10px;
 }
 
 .line.buy {
@@ -102,15 +217,57 @@
 
 .line.buy .data {
 	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
 }
 
-.line.find {
+.line.buy .data p {
+	color: #29bdca;
+	margin-right: 15px;
+}
+
+.line.buy .data button {
+	width: 170px;
+	height: 40px;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #1c818a;
+	border: none;
+	border-radius: 5px;
+}
+
+
+.line.findus {
 	background: #29bdca;
 }
 
-.line.find .data {
+.line.findus .data {
 	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 22px;
+	color: #fff;
 }
+
+.line.findus .data .social {
+	display: flex;
+}
+
+.line.findus .data .social a {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #2095a0;
+}
+
+.line.findus .data a:not(:last-child) {
+	margin-right: 1px; 
+}
+
 
 .line.about {
 	background: #444;
@@ -118,6 +275,107 @@
 
 .line.about .data {
 	height: 400px;
+	display: flex;
+}
+
+.line.about .data h2 {
+	font-size: 18px;
+	font-weight: normal;
+	color: #fff;
+	margin-bottom: 25px;
+}
+
+.line.about .data .col {
+	padding-top: 45px;
+}
+
+.line.about .left {
+	width: 34%;
+	padding-right: 20px;
+}
+
+.line.about .left p {
+	font-size: 14px;
+	color: #888;
+	padding-bottom: 30px;
+}
+
+.line.about .left form {
+	position: relative;
+	padding-right: 55px;
+}
+
+.line.about .left form  * {
+	border: none;
+	border-radius: 5px;
+}
+
+.line.about .left input {
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 5px;
+	background-color: #fff;
+}
+
+.line.about .left button {
+	position: absolute;
+	width: 50px;
+	height: 35px;
+	color: #fff;
+	right: 0;
+	top: 0;
+	background-color: #888;
+}
+
+.line.about .center {
+	width: 33%;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 0.75em;
+	line-height: 1.75em;
+}
+
+.line.about .center .tweet {
+	padding: 15px;
+	background-color: #333;
+	margin-bottom: 20px;
+}
+
+.line.about .center .tweet .text {
+	color: #888;
+}
+
+.line.about .center .tweet a {
+	color: #bbb;
+}
+
+.line.about .center .tweet .date {
+	color: #bbb;
+	text-align: right;
+}
+
+.line.about .center .followus {
+	color: #bbb;
+}
+
+.line.about .right {
+	width: 33%;
+	padding-left: 20px;
+	font-size: 0.75em;
+	line-height: 1.75em;
+}
+
+.line.about .right .post {
+	margin-bottom: 10px;
+}
+
+.line.about .right .post .text {
+	color: #bbb;
+}
+
+.line.about .right .post .date {
+	color: #888;
 }
 
 .line.footer {
@@ -126,4 +384,22 @@
 
 .line.footer .data {
 	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.75em;
+	color: #fff;
+}
+
+.line.footer .data .nav {
+	display: flex;
+}
+
+.line.footer .data .nav li {
+	text-transform: uppercase;
+	margin-right: 20px; 
+}
+
+.line.footer .data .metrolium span {
+	color: #888;
 }
